@@ -372,7 +372,6 @@ def AdminPanel():
 	Option3.grid(row = 2, columnspan = 3, column = 1,sticky = "nsew")
 
 	Option4 = Button(root, font=Font_tuple1, text = "Submit", command = Submit)
-	Option4.grid(row = 3, columnspan= 3, column = 1 ,sticky = "nsew")
 
 	Topic8 = Button(frame,font = ("OstrichSans-Black", 30),text = "Back",bg= "#1A4121",command = Start ,relief="raised")
 	Topic8.place(relx = 0.5, rely = 0.9, anchor="center")
