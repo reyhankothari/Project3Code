@@ -75,6 +75,7 @@ def AnyTopic(topic = "Any"):
 					match = current.fetchall()
 
 					Count = match[0][0]
+					print("HI")
 					current.execute(f"SELECT QuestionPath, AnswerPath, Topic FROM Questions WHERE Topic = '{str(topic)}' ORDER BY RANDOM() LIMIT 1")
 				match = current.fetchall()
 			Question = match[0][0]	
