@@ -23,7 +23,7 @@ UsedQuestions = []
 #Restricting the sizes the user can minimisize down to
 root.minsize(width="825", height=547)
 
-root.attributes('-fullscreen', True) #Maybe create a full screen button
+root.attributes('-fullscreen', False) #Maybe create a full screen button
 
 root.title("GCSE Computer Science Revision")
 
@@ -75,6 +75,7 @@ def AnyTopic(topic = "Any"):
 					match = current.fetchall()
 
 					Count = match[0][0]
+					print(match)
 					print("HI")
 					current.execute(f"SELECT QuestionPath, AnswerPath, Topic FROM Questions WHERE Topic = '{str(topic)}' ORDER BY RANDOM() LIMIT 1")
 				match = current.fetchall()
@@ -112,6 +113,7 @@ def AnyTopic(topic = "Any"):
 		#Displaying image on tkinter windows
 		label2 = Label(root,image = my_img,bg = "#1A4121")
 		label2.place(relx = 0.5, rely = 0.3,anchor = "center")
+
 		label2.image = my_img	
 
 		#Displaying an entry box with an dark green outline using the frame element
